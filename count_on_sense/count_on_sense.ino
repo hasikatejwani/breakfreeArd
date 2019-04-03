@@ -41,7 +41,7 @@ bool buzz() {
   // Distance is half the duration devided by 29.1 (from datasheet)
   distance = (duration / 2) / 29.1;
   
-    Serial.println(distance+"cm");
+  Serial.println(distance+"cm");
 
    //if distance less than 0.5 meter and more than 0 (0 or less means over range)
   if (distance <= 8 && distance >= 0) {
@@ -51,7 +51,7 @@ bool buzz() {
     digitalWrite(buzzPin, LOW);
 
     count = count + 1; //increasing the value of the count
-    Serial.println(count);
+    //Serial.println(count);
     delay(1000); //delay in printing the count to avoid multiple number entries
     if (count > 9) {
       count = 0;
